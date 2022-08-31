@@ -1,4 +1,5 @@
 # Fwetch
+### [This package](https://crates.io/crates/fwetch)
 *Uses [Reqwest](https://crates.io/crates/reqwest)*
 **by [Franklin Blanco](https://github.com/franklinblanco)**
 
