@@ -3,6 +3,16 @@ use serde::{Serialize, de::DeserializeOwned};
 use crate::dto::{error::Error, method::Method};
 
 /// Takes a complete url, a method enum, a body (can be None), and headers (can be None)
+/// Usage:
+/// ```
+/// #[derive(Serialize, Deserialize)] // <-- This is from serde (serde.rs)
+/// struct Person{
+/// 	pub name: String
+/// }
+/// // If this panics you will get more context regarding what happened than you usually would with reqwest.
+/// let person: Person = fwetch("testurl.com", Method::Get, None, None).await.unwrap();
+/// // You can now use this struct freely.
+/// ```
 pub async fn fwetch<B: Serialize, R: DeserializeOwned>(
     url: String,
     method: Method,
