@@ -7,6 +7,7 @@ description = "Brought from NodeJs to rust."
 license = "MIT"
 readme = "README.md"
 repository = "https://github.com/franklinblanco/fwetch"
+documentation = "https://docs.rs/fwetch/"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 [lib]
@@ -19,7 +20,7 @@ serde_json = {version = "1"}
 actix-web = {version = "4", optional = true}
 
 [features]
-default = ["essential"]
+default = ["all"]
 actix = ["dep:actix-web"]
 essential = []
 all = ["actix", "essential"]
